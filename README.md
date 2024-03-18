@@ -3,7 +3,7 @@
 The website is built using React , and application state is managed using Redux. the website is deployed on Vercel
 
 ## Deployed Link
-[https://react-task-o0njk8yx3-mihirgore23s-projects.vercel.app/]
+[TaskBuddy](https://react-task-o0njk8yx3-mihirgore23s-projects.vercel.app/)
 
 ## Steps to run locally
 1. Clone the repository
@@ -20,3 +20,4 @@ The website is built using React , and application state is managed using Redux.
 - Due dates for a task can be specified during task creation
 
 ## Screenshot
+![](http://url/to/img.png](http://url/to/img.png)http://url/to/img.png)
