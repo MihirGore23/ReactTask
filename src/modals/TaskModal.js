@@ -27,6 +27,7 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
 
   const [status, setStatus] = useState(task.status);
   const [priority, setPriority] = useState(task.priority);
+  const [dateOfCompletion, setDateOfCompletion] = useState(task.dateOfCompletion);
   const [newColIndex, setNewColIndex] = useState(columns.indexOf(col));
 
   const onChangeStatus = (e) => {
@@ -36,6 +37,10 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
 
   const onChangePriority = (e) => {
     setPriority(e.target.value);
+  };
+
+  const onChangeDate = (e) => {
+    setDateOfCompletion(e.target.value);
   };
 
   const onClose = (e) => {
@@ -143,6 +148,20 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
               </option>
             ))}
           </select>
+        </div>
+
+        {/* Date of Completion Section */}
+
+        <div className="mt-8 flex flex-col space-y-3">
+          <label className="text-sm dark:text-white text-gray-500">
+            Date of Completion
+          </label>
+          <input
+            type="date"
+            value={dateOfCompletion}
+            onChange={onChangeDate}
+            className="px-4 py-2 rounded-md text-sm bg-transparent focus:border-0 border-[1px] border-gray-300 focus:outline-[#635fc7] outline-none"
+          />
         </div>
 
         {/* Priority Section */}

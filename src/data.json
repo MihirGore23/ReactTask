@@ -9,6 +9,7 @@
           "tasks": [ {
             "title": "Get selected as a GSoC Contributor",
             "description": "",
+            "dateOfCompletion" : "22/03/2024",
             "priority" : "High",
             "status": "",
             "subtasks": [
@@ -21,6 +22,7 @@
           "tasks": [ {
             "title": "React App Task",
             "description": "",
+            "dateOfCompletion" : "22/03/2024",
             "priority" : "High",
             "status": "",
             "subtasks": [
@@ -28,6 +30,7 @@
           },{
             "title": "Build Proposal ",
             "description": "",
+            "dateOfCompletion" : "22/03/2024",
             "priority" : "High",
             "status": "",
             "subtasks": [
@@ -39,6 +42,7 @@
           "tasks": [
             {
               "title": "PR on JDERobot",
+              "dateOfCompletion" : "22/03/2024",
               "description": "Completed",
               "priority" : "High",
               "status": "",
@@ -48,6 +52,7 @@
             {
               "title": "RoboticsAcademy Task",
               "description": "Completed",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "",
               "subtasks": [
@@ -56,6 +61,7 @@
             {
               "title": "Python Task",
               "description": "Completed",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "",
               "subtasks": [
@@ -64,6 +70,7 @@
             {
               "title": "ROS2 Task",
               "description": "Completed",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "",
               "subtasks": [
@@ -82,6 +89,7 @@
             {
               "title": "Text Mom",
               "description": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "Todo",
               "subtasks": [
@@ -94,6 +102,7 @@
             {
               "title": "Repair TV",
               "description": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "Medium",
               "status": "Todo",
               "subtasks": [
@@ -110,6 +119,7 @@
             {
               "title": "Work on Fitness",
               "description": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "Doing",
               "subtasks": [
@@ -131,6 +141,7 @@
             {
               "title": "Visit Spain",
               "description": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "Completed",
               "subtasks": [
@@ -155,6 +166,7 @@
             {
               "title": "Get Avocados",
               "description": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "High",
               "status": "",
               "subtasks": [
@@ -164,6 +176,7 @@
               "title": "Get Olives",
               "description": "Beyond the initial launch, we're keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.",
               "status": "",
+              "dateOfCompletion" : "22/03/2024",
               "priority" : "Medium",
               "subtasks": [
               ]

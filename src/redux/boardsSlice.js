@@ -35,9 +35,9 @@ const boardsSlice = createSlice({
       });
     },
     addTask: (state, action) => {
-      const { title, status, description, subtasks, priority, newColIndex } =
+      const { title, status, description,dateOfCompletion, subtasks, priority, newColIndex } =
         action.payload;
-      const task = { title, description, subtasks, status, priority };
+      const task = { title, description, subtasks, status,dateOfCompletion, priority };
       const board = state.find((board) => board.isActive);
       const column = board.columns.find((col, index) => index === newColIndex);
       column.tasks.push(task);
@@ -46,6 +46,7 @@ const boardsSlice = createSlice({
       const {
         title,
         status,
+        dateOfCompletion,
         priority,
         description,
         subtasks,
@@ -58,6 +59,7 @@ const boardsSlice = createSlice({
       const task = column.tasks.find((task, index) => index === taskIndex);
       task.title = title;
       task.status = status;
+      task.dateOfCompletion = dateOfCompletion;
       task.priority = priority;
       task.description = description;
       task.subtasks = subtasks;

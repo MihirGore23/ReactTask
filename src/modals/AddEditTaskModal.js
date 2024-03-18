@@ -17,6 +17,7 @@ function AddEditTaskModal({
   const [isValid, setIsValid] = useState(true);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [dateOfCompletion, setDateOfCompletion] = useState(""); // New state for date of completion
   const board = useSelector((state) => state.boards).find(
     (board) => board.isActive
   );
@@ -45,6 +46,10 @@ function AddEditTaskModal({
     setNewColIndex(e.target.selectedIndex);
   };
 
+  const onChangeDateOfCompletion = (e) => { // Function to handle changes in the date of completion
+    setDateOfCompletion(e.target.value);
+  };
+
   const validate = () => {
     setIsValid(false);
     if (!title.trim()) {
@@ -59,7 +64,7 @@ function AddEditTaskModal({
     return true;
   };
 
-  const [priority, setPriority] = useState("Medium"); // New priority state
+  const [priority, setPriority] = useState("Medium");
 
   const onChangePriority = (e) => {
     setPriority(e.target.value);
@@ -73,6 +78,7 @@ function AddEditTaskModal({
     );
     setTitle(task.title);
     setDescription(task.description);
+    setDateOfCompletion(task.dateOfCompletion); // Set date of completion if editing
     setIsFirstLoad(false);
   }
 
@@ -88,7 +94,8 @@ function AddEditTaskModal({
           description,
           subtasks,
           status,
-          priority, // Include priority in the payload
+          priority,
+          dateOfCompletion, // Include date of completion in the payload
           newColIndex,
         })
       );
@@ -99,7 +106,8 @@ function AddEditTaskModal({
           description,
           subtasks,
           status,
-          priority, // Include priority in the payload
+          priority,
+          dateOfCompletion, // Include date of completion in the payload
           taskIndex,
           prevColIndex,
           newColIndex,
@@ -107,7 +115,6 @@ function AddEditTaskModal({
       );
     }
   };
-  
 
   return (
     <div
@@ -123,8 +130,6 @@ function AddEditTaskModal({
         setIsAddTaskModalOpen(false);
       }}
     >
-      {/* Modal Section */}
-
       <div
         className=" scrollbar-hide overflow-y-scroll max-h-[95vh]  my-auto  bg-white dark:bg-[#2b2c37] text-black dark:text-white font-bold
        shadow-md shadow-[#364e7e1a] max-w-md mx-auto  w-full px-8  py-8 rounded-xl"
@@ -132,8 +137,6 @@ function AddEditTaskModal({
         <h3 className=" text-lg ">
           {type === "edit" ? "Edit" : "Add New"} Task
         </h3>
-
-        {/* Task Name */}
 
         <div className="mt-8 flex flex-col space-y-1">
           <label className="  text-sm dark:text-white text-gray-500">
@@ -149,7 +152,6 @@ function AddEditTaskModal({
           />
         </div>
 
-        {/* Description */}
         <div className="mt-8 flex flex-col space-y-1">
           <label className="  text-sm dark:text-white text-gray-500">
             Description
@@ -162,8 +164,6 @@ function AddEditTaskModal({
             
           />
         </div>
-
-        {/* Subtasks */}
 
         <div className="mt-8 flex flex-col space-y-3">
           <label className="  text-sm dark:text-white text-gray-500">
@@ -203,7 +203,7 @@ function AddEditTaskModal({
             + Add New Subtask
           </button>
         </div>
-        {/* Priority dropdown */}
+
         <div className="mt-8 flex flex-col space-y-3">
           <label className="  text-sm dark:text-white text-gray-500">
             Priority
@@ -219,7 +219,19 @@ function AddEditTaskModal({
           </select>
           
         </div>
-        {/* current Status  */}
+
+        <div className="mt-8 flex flex-col space-y-3">
+          <label className="  text-sm dark:text-white text-gray-500">
+            Date of Completion
+          </label>
+          <input
+            type="date"
+            value={dateOfCompletion}
+            onChange={onChangeDateOfCompletion}
+            className="flex-grow px-4 py-2 rounded-md text-sm bg-transparent focus:border-0 border-[1px] border-gray-300 focus:outline-[#635fc7] outline-none"
+          />
+        </div>
+
         <div className="mt-8 flex flex-col space-y-3">
           <label className="  text-sm dark:text-white text-gray-500">
             Current Status
