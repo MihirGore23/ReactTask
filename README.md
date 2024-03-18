@@ -8,9 +8,13 @@ The website is built using React , and application state is managed using Redux.
 ## Steps to run locally
 1. Clone the repository
 2. Install the packages
+   ```
    npm install
-3. Run this command
+   ```
+4. Run this command
+   ```
    npm start
+   ```
 
 ## Features 
 - Ability to add new tasks and subtasks . user can also add description, status and priority of the tasks
