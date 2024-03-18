@@ -20,4 +20,4 @@ The website is built using React , and application state is managed using Redux.
 - Due dates for a task can be specified during task creation
 
 ## Screenshot
-![](http://url/to/img.png](http://url/to/img.png)http://url/to/img.png)
+![](https://github.com/MihirGore23/ReactTask/blob/main/public/Screenshot.png)
