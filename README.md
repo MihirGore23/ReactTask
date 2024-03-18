@@ -1,9 +1,9 @@
 # React Task
 ## Description 
-The website is built using React , and application state is managed using Redux. the website is deployed on Vercel
+The website is built using React , and application state is managed using Redux. The website is deployed on Vercel
 
 ## Deployed Link
-[TaskBuddy](https://react-task-o0njk8yx3-mihirgore23s-projects.vercel.app/)
+[TaskBuddy](https://react-task-kzvs.vercel.app/)
 
 ## Steps to run locally
 1. Clone the repository
